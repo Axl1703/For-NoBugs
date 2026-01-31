@@ -14,15 +14,13 @@ public class GameSettings {
        return maxPlayers++;
     };
 
-
     public int addPlayer(int players){
         boolean condition = this.currentPlayers < maxPlayers;
         if (condition){
             this.currentPlayers = this.currentPlayers + players;
-        };
+        }
         return this.currentPlayers;
-    };
-
+    }
 
     public void printGameStatus(){
         System.out.println("Название игры " + gameName + " Текущие игроки " + currentPlayers + " Максимальное кол-во игроков " + maxPlayers);
