@@ -9,11 +9,11 @@ public class Student {
     }
 
     int age;
-    String Name;
+    String name;
 
     Student(int age, String Name) {
         this.age = age;
-        this.Name = Name;
+        this.name = Name;
         studentCount++;
     }
 

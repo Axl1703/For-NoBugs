@@ -10,8 +10,8 @@ public class University {
         this.studentName = studentName;
     }
 
-    public static String changeUniversityName(String newName) {
-        return universityName = newName;
+    public static void changeUniversityName(String newName) {
+        universityName = newName;
     }
 
     public String getStudentName() {

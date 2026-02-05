@@ -47,7 +47,7 @@ public class Main {
         GameSettings game1 = new GameSettings("Футбол", 10);
         GameSettings game2 = new GameSettings("Хоккей", 5);
 
-        GameSettings.setMaxPlayers();
+        GameSettings.changeMaxPlayers();
 
         game1.addPlayer(1);
 

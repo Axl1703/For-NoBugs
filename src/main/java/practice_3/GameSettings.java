@@ -10,19 +10,20 @@ public class GameSettings {
         this.currentPlayers = currentPlayers;
     }
 
-    public static int setMaxPlayers(){
-       return maxPlayers++;
-    };
+    public static void changeMaxPlayers() {
+        maxPlayers++;
+    }
+    ;
 
-    public int addPlayer(int players){
-        boolean condition = this.currentPlayers < maxPlayers;
-        if (condition){
-            this.currentPlayers = this.currentPlayers + players;
+    public int addPlayer(int players) {
+        int newPlayersCount = this.currentPlayers + players;
+        if (newPlayersCount <= maxPlayers) {
+            this.currentPlayers = newPlayersCount;
         }
         return this.currentPlayers;
     }
 
-    public void printGameStatus(){
+    public void printGameStatus() {
         System.out.println("Название игры " + gameName + " Текущие игроки " + currentPlayers + " Максимальное кол-во игроков " + maxPlayers);
     }
 }
