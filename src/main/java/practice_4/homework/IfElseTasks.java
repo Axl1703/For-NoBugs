@@ -5,16 +5,17 @@ import java.util.Scanner;
 public class IfElseTasks {
 
     public static void main(String[] args) {
-        checkNumber();
-        findMaxValue();
-        printRating();
-        checkParity();
-        discount();
-        checkTestResult();
+        Scanner scanner = new Scanner(System.in);
+
+        checkNumber(scanner);
+        findMaxValue(scanner);
+        printRating(scanner);
+        checkParity(scanner);
+        discount(scanner);
+        checkTestResult(scanner);
     }
 
-    public static void checkNumber() {
-        Scanner scanner = new Scanner(System.in);
+    public static void checkNumber(Scanner scanner) {
         int command = scanner.nextInt();
         if (command > 0) {
             System.out.println("Число положительное");
@@ -26,8 +27,7 @@ public class IfElseTasks {
     }
 
 
-    public static void findMaxValue() {
-        Scanner scanner = new Scanner(System.in);
+    public static void findMaxValue(Scanner scanner) {
         System.out.println("Type number 1");
         int firstNumber = scanner.nextInt();
         System.out.println("Type number 2");
@@ -42,8 +42,7 @@ public class IfElseTasks {
         System.out.println(maxValue);
     }
 
-    public static void printRating() {
-        Scanner scanner = new Scanner(System.in);
+    public static void printRating(Scanner scanner) {
         System.out.println("Type number from 1 to 5 ");
         int number = scanner.nextInt();
         if (number == 5) {
@@ -57,8 +56,7 @@ public class IfElseTasks {
         }
     }
 
-    public static void checkParity() {
-        Scanner scanner = new Scanner(System.in);
+    public static void checkParity(Scanner scanner) {
         System.out.println("Type number ");
         int number = scanner.nextInt();
         if (number % 2 == 0) {
@@ -68,8 +66,7 @@ public class IfElseTasks {
         }
     }
 
-    public static void discount() {
-        Scanner scanner = new Scanner(System.in);
+    public static void discount(Scanner scanner) {
         System.out.println("Type your age ");
         int age = scanner.nextInt();
         if (age < 18) {
@@ -81,8 +78,7 @@ public class IfElseTasks {
         }
     }
 
-    public static void checkTestResult() {
-        Scanner scanner = new Scanner(System.in);
+    public static void checkTestResult(Scanner scanner) {
         System.out.println("Type number from 0 to 100 ");
         int result = scanner.nextInt();
         if (result >= 90) {

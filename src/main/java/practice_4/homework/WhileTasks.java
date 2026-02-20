@@ -5,13 +5,14 @@ import java.util.Scanner;
 public class WhileTasks {
 
     public static void main(String[] args) {
-        factorial();
-        evenNumbers();
-        countdown();
+        Scanner scanner = new Scanner(System.in);
+
+        factorial(scanner);
+        evenNumbers(scanner);
+        countdown(scanner);
     }
 
-    public static void factorial() {
-        Scanner scanner = new Scanner(System.in);
+    public static void factorial(Scanner scanner) {
         System.out.println("Type number ");
         int n = scanner.nextInt();
         int result = 1;
@@ -23,8 +24,7 @@ public class WhileTasks {
         System.out.println(result);
     }
 
-    public static void evenNumbers() {
-        Scanner scanner = new Scanner(System.in);
+    public static void evenNumbers(Scanner scanner) {
         System.out.println("Type number ");
         int n = scanner.nextInt();
         int i = 1;
@@ -35,12 +35,10 @@ public class WhileTasks {
         }
     }
 
-    public static void countdown() {
-        Scanner scanner = new Scanner(System.in);
+    public static void countdown(Scanner scanner) {
         System.out.println("Type number ");
         int n = scanner.nextInt();
-        int i = 1;
-        while (i <= n) {
+        while (n > 0) {
             System.out.print(n + " ");
             n--;
         }

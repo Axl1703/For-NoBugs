@@ -2,17 +2,18 @@ package practice_4.homework;
 
 import java.util.Scanner;
 
-public class SwithTasks {
+public class SwitchTasks {
     public static void main(String[] args) {
-//        daysOfWeek();
-//        ticketPrice();
-//        convertion();
-//        commands();
-        calculate();
+        Scanner scanner = new Scanner(System.in);
+
+        daysOfWeek(scanner);
+        ticketPrice(scanner);
+        convertion(scanner);
+        commands(scanner);
+        calculate(scanner);
     }
 
-    public static void daysOfWeek() {
-        Scanner scanner = new Scanner(System.in);
+    public static void daysOfWeek(Scanner scanner) {
         System.out.println("Type number from 1 to 7");
         int number = scanner.nextInt();
         switch (number) {
@@ -42,8 +43,7 @@ public class SwithTasks {
         }
     }
 
-    public static void ticketPrice() {
-        Scanner scanner = new Scanner(System.in);
+    public static void ticketPrice(Scanner scanner) {
         System.out.println("Type day of a week from 1 to 7");
         int number = scanner.nextInt();
         switch (number) {
@@ -58,8 +58,7 @@ public class SwithTasks {
         }
     }
 
-    public static void convertion() {
-        Scanner scanner = new Scanner(System.in);
+    public static void convertion(Scanner scanner) {
         System.out.println("Type number from 0 to 100");
         int number = scanner.nextInt();
         if (number >= 90 && number <= 100) {
@@ -75,8 +74,7 @@ public class SwithTasks {
         }
     }
 
-    public static void commands() {
-        Scanner scanner = new Scanner(System.in);
+    public static void commands(Scanner scanner) {
         System.out.println("Type the command");
         String command = scanner.nextLine();
         switch (command) {
@@ -97,16 +95,17 @@ public class SwithTasks {
         }
     }
 
-    public static void calculate() {
-        Scanner scanner = new Scanner(System.in);
+    public static void calculate(Scanner scanner) {
         System.out.println("Type firstNumber");
         int firstNumber = scanner.nextInt();
+        scanner.nextLine();
+
         System.out.println("Type secondNumber");
         int secondNumber = scanner.nextInt();
+        scanner.nextLine();
 
-        Scanner scanner2 = new Scanner(System.in);
         System.out.println("Type operator");
-        String operator = scanner2.nextLine();
+        String operator = scanner.nextLine();
 
         switch (operator) {
             case "+":
@@ -130,3 +129,4 @@ public class SwithTasks {
         }
     }
 }
+

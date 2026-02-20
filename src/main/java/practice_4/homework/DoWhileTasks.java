@@ -4,15 +4,16 @@ import java.util.Scanner;
 
 public class DoWhileTasks {
     public static void main(String[] args) {
-        positiveNumber();
-        checkPassword();
+        Scanner scanner = new Scanner(System.in);
+
+        positiveNumber(scanner);
+        checkPassword(scanner);
         tenNumbers();
-        correctCommand();
-        countDigits();
+        correctCommand(scanner);
+        countDigits(scanner);
     }
 
-    public static void positiveNumber() {
-        Scanner scanner = new Scanner(System.in);
+    public static void positiveNumber(Scanner scanner) {
         int n;
         do {
             System.out.println("Type number ");
@@ -21,8 +22,7 @@ public class DoWhileTasks {
         System.out.println("Number is positive");
     }
 
-    public static void checkPassword() {
-        Scanner scanner = new Scanner(System.in);
+    public static void checkPassword(Scanner scanner) {
         String password;
         do {
             System.out.println("Type password ");
@@ -39,17 +39,16 @@ public class DoWhileTasks {
         } while (n <= 10);
     }
 
-    public static void correctCommand() {
-        Scanner scanner = new Scanner(System.in);
+    public static void correctCommand(Scanner scanner) {
         String command;
         do {
+            System.out.println("Type command ");
             command = scanner.nextLine();
         } while (!command.equals("exit"));
         System.out.println("Turn off");
     }
 
-    public static void countDigits() {
-        Scanner scanner = new Scanner(System.in);
+    public static void countDigits(Scanner scanner) {
         int number = scanner.nextInt();
         int count = 0;
         do {

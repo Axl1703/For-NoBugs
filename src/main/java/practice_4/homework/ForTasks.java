@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 public class ForTasks {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         numbersOf3();
-        sumOfNumbers();
-        multiplicationTable();
-        isSimpleNumber();
+        sumOfNumbers(scanner);
+        multiplicationTable(scanner);
+        isSimpleNumber(scanner);
         printNumbers();
     }
 
@@ -19,8 +21,7 @@ public class ForTasks {
         }
     }
 
-    public static void sumOfNumbers() {
-        Scanner scanner = new Scanner(System.in);
+    public static void sumOfNumbers(Scanner scanner) {
         System.out.println("Type number ");
         int n = scanner.nextInt();
         int sum = 0;
@@ -30,8 +31,7 @@ public class ForTasks {
         System.out.println(sum);
     }
 
-    public static void multiplicationTable() {
-        Scanner scanner = new Scanner(System.in);
+    public static void multiplicationTable(Scanner scanner) {
         System.out.println("Type number to bild multiplication table ");
         int number = scanner.nextInt();
         int result;
@@ -41,13 +41,12 @@ public class ForTasks {
         }
     }
 
-    public static void isSimpleNumber() {
-        Scanner scanner = new Scanner(System.in);
+    public static void isSimpleNumber(Scanner scanner) {
         System.out.println("Type number to check is it simple ");
         int number = scanner.nextInt();
         boolean isPrime = true;
-        for (int i = 2; i <= number - 1; i++) {
-            if (number % i == 0) {
+        for (int i = 2; i <= number/2; i++) {
+            if (number % i == 0 || number <= 1) {
                 isPrime = false;
             }
         }
