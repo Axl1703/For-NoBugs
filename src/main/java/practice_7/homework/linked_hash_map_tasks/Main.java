@@ -1,4 +1,4 @@
-package practice_7.homework.linkied_hash_map_tasks;
+package practice_7.homework.linked_hash_map_tasks;
 
 import java.util.LinkedHashMap;
 
