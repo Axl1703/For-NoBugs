@@ -15,34 +15,38 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayDeque<Integer> numbers = new ArrayDeque<>();
+        ArrayDeque<Integer> numbersForTask1 = new ArrayDeque<>();
 
-        numbers.add(12);
-        numbers.add(22);
-        numbers.add(62);
-        numbers.add(32);
-        numbers.add(92);
+        numbersForTask1.add(12);
+        numbersForTask1.add(22);
+        numbersForTask1.add(62);
+        numbersForTask1.add(32);
+        numbersForTask1.add(92);
 
-        System.out.println(numbers);
+        System.out.println(numbersForTask1);
 
-        numbers.push(88);
-        numbers.push(99);
-        numbers.push(100);
+        ArrayDeque<Integer> numbersForTask2 = new ArrayDeque<>();
 
-        while (!numbers.isEmpty()) {
-            System.out.println(numbers.pop());
+        numbersForTask2.push(88);
+        numbersForTask2.push(99);
+        numbersForTask2.push(100);
+
+        while (!numbersForTask2.isEmpty()) {
+            System.out.println(numbersForTask2.pop());
         }
 
-        numbers.addFirst(11);
-        System.out.println(numbers);
-        numbers.removeFirst();
+        ArrayDeque<Integer> numbersForTask3 = new ArrayDeque<>();
 
-        System.out.println(numbers);
+        numbersForTask3.addFirst(11);
+        System.out.println(numbersForTask3);
+        numbersForTask3.addLast(33);
 
-        numbers.addLast(33);
-        System.out.println(numbers);
-        numbers.removeLast();
+        System.out.println(numbersForTask3);
 
-        System.out.println(numbers);
+        numbersForTask3.removeFirst();
+        System.out.println(numbersForTask3);
+        numbersForTask3.removeLast();
+
+        System.out.println(numbersForTask3);
     }
 }

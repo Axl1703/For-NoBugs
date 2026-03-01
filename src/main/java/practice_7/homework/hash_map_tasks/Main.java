@@ -1,6 +1,7 @@
 package practice_7.homework.hash_map_tasks;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
@@ -20,7 +21,9 @@ public class Main {
         map.put("Olga", 27);
         map.put("Dima", 33);
 
-        System.out.println(map);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
 
         if (map.containsKey("Nick")) {
             System.out.println("Nick is here");

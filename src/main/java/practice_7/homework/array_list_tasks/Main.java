@@ -29,11 +29,12 @@ public class Main {
         numbers.add(44);
         numbers.add(55);
 
-        System.out.println("Size of list " + numbers);
-
+        System.out.println("Size of list " + numbers.size());
+        System.out.println(numbers);
         numbers.add(60);
 
-        System.out.println("Size of list after add " + numbers);
+        System.out.println("Size of list after add " + numbers.size());
+        System.out.println(numbers);
 
         getEvenNumber(numbers);
 

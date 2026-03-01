@@ -13,7 +13,7 @@ public class Main {
     public static void checkDuplicates(LinkedHashSet<String> set, String line) {
         if (set.contains(line)) {
             System.out.println("Error " + line + " is duplicate");
-        } else System.out.println(line + " has added");
+        } else System.out.println(set.add(line) + " has added");
 
     }
 

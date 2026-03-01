@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Second HasSet: " + tenNumbers);
         if (tenNumbers.contains(9)) {
             System.out.println("Number 9 is in HashSet ");
-        }
+        }else System.out.println("Number 9 isn't in HashSet");
     }
 
 
