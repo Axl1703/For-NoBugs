@@ -3,7 +3,6 @@ package practice_8.homework;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Main {
 
@@ -53,7 +52,6 @@ public class Main {
             checkAge(age);
         } catch (InvalidAgeException e) {
             System.out.println(e.getMessage());
-            ;
         }
 
         Scanner scannerLine = new Scanner(System.in);
@@ -64,7 +62,6 @@ public class Main {
             checkEmail(email);
         } catch (InvalidEmailException e) {
             System.out.println(e.getMessage());
-            ;
         }
     }
 }
