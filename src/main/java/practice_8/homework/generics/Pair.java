@@ -1,4 +1,4 @@
-package practice_8.homework;
+package practice_8.homework.generics;
 
 public class Pair<T1, T2> {
     private T1 first;

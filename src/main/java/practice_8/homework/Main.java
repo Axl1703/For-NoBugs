@@ -2,16 +2,19 @@ package practice_8.homework;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
     public static void getResult(int firstNumber, int secondNumber) {
         double result;
-        result = (double) firstNumber / secondNumber;
         if (secondNumber == 0) {
             throw new ArithmeticException("Ошибка - деление на 0 невозможно");
-        } else System.out.println(result);
+        } else {
+            result = (double) firstNumber / secondNumber;
+        }
+        System.out.println(result);
     }
 
     public static void checkAge(int age) throws InvalidAgeException {
@@ -21,17 +24,21 @@ public class Main {
     }
 
     public static void checkEmail(String email) throws InvalidEmailException {
-        if (!email.contains("@") || !email.contains("."))
+        String regular = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+        if (!email.matches(regular)) {
             throw new InvalidEmailException("Невалидный email");
+        }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileReader reader = null;
         try {
             reader = new FileReader("data.text");
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
+        assert reader != null;
+        reader.close();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое число: ");

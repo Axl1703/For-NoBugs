@@ -1,4 +1,4 @@
-package practice_8.homework;
+package practice_8.homework.generics;
 
 public class Box<T> {
     private T element;
@@ -15,9 +15,5 @@ public class Box<T> {
         this.element = element;
     }
 
-    public <T> void printArray(T[] array) {
-        for (T element : array) {
-            System.out.println(element);
-        }
-    }
+
 }
