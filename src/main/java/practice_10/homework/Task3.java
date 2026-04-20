@@ -12,17 +12,18 @@ public class Task3 {
         AtomicInteger i = new AtomicInteger();
         Thread t1 = new Thread(() -> {
             while (!stop) {
-                i.set(i.get() + 1);
+                i.getAndIncrement();
                 System.out.println(i.get());
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                stop = true;
             }
         });
 
         t1.start();
+
+        try {
+            Thread.sleep(2000);
+            stop = true;
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

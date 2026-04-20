@@ -8,28 +8,28 @@ public class Task2 {
         Thread thread1 = new Thread(() -> {
             for (int i = 0; i <= 4; i++) {
                 System.out.println("A");
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         Thread thread2 = new Thread(() -> {
             for (int i = 0; i <= 4; i++) {
                 System.out.println("B");
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
         thread1.start();
-        thread1.join();
-
         thread2.start();
     }
 }
