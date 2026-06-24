@@ -38,4 +38,15 @@ public class MethodsForTesting {
         return (n == 0) ? 1 : n * factorial(n - 1);
     }
 
+    public int findSecondMax(int[] numbers) {
+        return Arrays.stream(numbers).distinct().sorted().skip(numbers.length - 2).findFirst().orElseThrow();
+    }
+
+    public int countWords(String sentence) {
+        return sentence.trim().isEmpty() ? 0 : sentence.split("\\s+").length;
+    }
+
+    public boolean isValidPhoneNumber(String phone) {
+        return phone.matches("\\+\\d{1,3} \\d{10}");
+    }
 }
