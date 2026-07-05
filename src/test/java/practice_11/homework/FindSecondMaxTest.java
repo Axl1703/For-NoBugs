@@ -1,9 +1,9 @@
 package practice_11.homework;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.testng.annotations.Test;
 
 import java.util.stream.Stream;
 

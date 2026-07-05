@@ -30,4 +30,9 @@ public class FindMaxTest extends MethodsForTestingTest {
     public void findMaxExceptionTest() {
         assertThrows(NoSuchElementException.class, () -> methodsForTesting.findMax(new int[]{}));
     }
+
+    @Test
+    public void findMaxExceptionForNullTest() {
+        assertThrows(NullPointerException.class, () -> methodsForTesting.findMax(null));
+    }
 }

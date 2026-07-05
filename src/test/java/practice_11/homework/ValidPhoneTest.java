@@ -1,10 +1,10 @@
 package practice_11.homework;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidPhoneTest extends MethodsForTestingTest {
 
@@ -18,5 +18,10 @@ public class ValidPhoneTest extends MethodsForTestingTest {
     @ValueSource(strings = {"+79119876543", "78125553535", "trrk", "", "47OOOOO", "@!%e457"})
     public void isInvalidValidPhoneNumber(String phone) {
         assertFalse(methodsForTesting.isValidPhoneNumber(phone));
+    }
+
+    @Test
+    public void phoneNumberForNullExceptionTest() {
+        assertThrows(NullPointerException.class, () ->  methodsForTesting.isValidPhoneNumber(null));
     }
 }
